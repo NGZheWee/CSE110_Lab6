@@ -24,7 +24,7 @@ function getRecipesFromStorage() {
   // A9. TODO - Complete the functionality as described in this function
   //           header. It is possible in only a single line, but should
   //           be no more than a few lines.
-  let r = localStorage.getItem('recipes')
+  let r = localStorage.getItem('recipes');
   if (r == null || r.length == 0) {
     return [];
   }
@@ -86,9 +86,10 @@ function initFormHandler() {
     //            values from the FormData object and insert them into recipeObject
     const formProps = Object.fromEntries(formData);
     // B6. TODO - Create a new <recipe-card> element
-    let card = new RecipeCard();
+    let card = document.createElement('recipe-card');
     // B7. TODO - Add the recipeObject data to <recipe-card> using element.data
     card.data = formProps;
+    console.log(card);
     // B8. TODO - Append this new <recipe-card> to <main>
     let refToMain = document.querySelector("main");
     refToMain.append(card);
