@@ -89,7 +89,6 @@ function initFormHandler() {
     let card = document.createElement('recipe-card');
     // B7. TODO - Add the recipeObject data to <recipe-card> using element.data
     card.data = formProps;
-    console.log(card);
     // B8. TODO - Append this new <recipe-card> to <main>
     let refToMain = document.querySelector("main");
     refToMain.append(card);
